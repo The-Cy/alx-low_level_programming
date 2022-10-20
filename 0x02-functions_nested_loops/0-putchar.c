@@ -1,26 +1,20 @@
 #include "main.h"
+
 /**
- *  * main - entry point
- *   * Description: prints  if a number is positive or negative.
- *    * Return: 0
+ *  * main - Prints Holberton as a message.
+ *   *
+ *    * Return: Always 0 (Success)
  *     */
 int main(void)
 {
-		int n;
+		int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
+			int count, sz;
 
-			srand(time(0));
-				n = rand() - RAND_MAX / 2;
-					if (n > 0)
+				sz = sizeof(str) / sizeof(int);
+					for (count = 0; count < sz; count++)
 							{
-										printf("%d is positive\n", n);
+										_putchar(str[count]);
 											}
-						else if (n == 0)
-								{
-											printf("%d is zero\n", n);
-												}
-							else if (n < 0)
-									{
-												printf("%d is negative\n", n);
-													}
-								return (0);
+						_putchar('\n');
+							return (0);
 }
