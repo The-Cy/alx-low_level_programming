@@ -1,24 +1,24 @@
-#include <stdio.h>
-#include <unistd.h>
-/**
- *  * main - Entry point
- *   * Description: prints lowercase alphabets
- *    * Return: Always 0 (success)
- *     */
-int main(void)
-{
-		int ch;
+#include "holberton.h"
 
-			for (ch = 'a'; ch <= 'z'; ch++)
+/**
+ *  * _isalpha - Entry point
+ *   * @c: the integer value it receives
+ *    * Description: checks if alphabet
+ *     * Return: 1 if true. 0 if false
+ *      */
+
+int _isalpha(int c)
+{
+		if (c >= 'a' && c <= 'z')
+				{
+						return (1);
+							}
+			else if (c >= 'A' && c <= 'Z')
 					{
-								if (ch != 'e' && ch != 'q')
-											{
-															putchar(ch);
-																	}
-										else
-													{
-																}
-											}
-				putchar('\n');
-					return (0);
+								return (1);
+									}
+				else
+						{
+									return (0);
+										}
 }

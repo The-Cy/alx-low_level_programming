@@ -1,18 +1,24 @@
-#include <stdio.h>
-#include <unistd.h>
-/**
- *  * main - Entry point
- *   * Description: prints the alphabet in lowercase\n
- *    * Return: Always 0 (success)
- *     */
-int main(void)
-{
-		int ch;
+#include "holberton.h"
 
-			for (ch = 'a'; ch <= 'z'; ch++)
-					{
-								putchar(ch);
-									}
-				putchar('\n');
-				return (0);
+/**
+ *  * print_alphabet_x10 - Make alphabet x10 times
+ *   *
+ *    * Return: void
+ *     */
+void print_alphabet_x10(void)
+{
+		char c;
+			int i = 0;
+
+				while (i <= 9)
+						{
+									for (c = 'a'; c <= 'z'; c++)
+												{
+																_putchar(c);
+																		}
+
+											_putchar('\n');
+
+													i++;
+														}
 }

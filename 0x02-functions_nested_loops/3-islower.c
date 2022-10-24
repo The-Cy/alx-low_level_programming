@@ -1,22 +1,22 @@
-#include <stdio.h>
-#include <unistd.h>
-/**
- *  * main - Entry point
- *   * Description: prints alphabet in lowercase then uppercase
- *    * Return: Always 0 (success)
- *     */
-int main(void)
-{
-		int ch;
+nclude "holberton.h"
 
-			for (ch = 'a'; ch <= 'z'; ch++)
-					{
-								putchar(ch);
-									}
-				for (ch = 'A'; ch <= 'Z'; ch++)
-						{
-									putchar(ch);
-										}
-					putchar('\n');
-						return (0);
+/**
+ *  * _islower - Entry point
+ *   * Description: checks is a character is lowercase
+ *    * @c: the integer value it receives
+ *     * Return: 1 if true. 0 if false.
+ *      */
+int _islower(int c)
+{
+	int i = 'a';
+
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		/* refer int c*/
+		if (c == i)
+		{
+			return (1);
+		}
+	}
+	return (0);
 }
