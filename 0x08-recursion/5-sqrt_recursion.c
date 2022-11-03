@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include "main.h"
+#include <stdio.h>
 int find_sqrt(int num, int root);
 int _sqrt_recursion(int n);
 
