@@ -1,24 +1,18 @@
-#include "holberton.h"
-
+#include <stdio.h>
+#include <unistd.h>
 /**
- *  * _abs - Entry point
- *   * @n: n is an integer
- *    * Description: prints the absolute value of an integer
- *     * Return: int
- *      */
-
-int _abs(int n)
+ *  * main - Entry point
+ *   * Description: prints char below 10
+ *    * Return: Always 0 (success)
+ *     */
+int main(void)
 {
-		if (n > 0)
-				{
-							return (n);
-								}
-			else if (n < 0)
+		int a;
+
+			for (a = 0; a < 10; a++)
 					{
-								return (-n);
+								putchar(a + '0');
 									}
-				else
-						{
-									return (n);
-										}
+				putchar('\n');
+					return (0);
 }
