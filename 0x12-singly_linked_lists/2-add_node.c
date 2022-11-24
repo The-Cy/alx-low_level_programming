@@ -1,27 +1,40 @@
-; My comments: It is so fun to write in assembly language
-; File: 101-hello_holberton.asm
-; Auth: Firdaus H. Salim
-; Desc: 64-bit assembly program that prints
-;       Hello, Holberton followed by a new line.
+#include "lists.h"
+#include <string.h>
 
-extern printf
+/**
+ *  * add_node - Adds a new node at the beginning
+ *   *            of a list_t list.
+ *    * @head: A pointer to the head of the list_t list.
+ *     * @str: The string to be added to the list_t list.
+ *      *
+ *       * Return: If the function fails - NULL.
+ *        *         Otherwise - the address of the new element.
+ *         */
+list_t *add_node(list_t **head, const char *str)
+{
+		list_t *new;
+			char *dup_str;
+				int len;
 
-section .text
-   global main
+					new = malloc(sizeof(list_t));
+						if (new == NULL)
+									return (NULL);
 
-   main:
-      push rbp
+							dup_str = strdup(str);
+								if (dup_str == NULL)
+										{
+													free(new);
+															return (NULL);
+																}
 
-         mov rdi,fmt
-	    mov rsi,msg
-	       mov rax,0
-	          call printf
+									for (len = 0; str[len];)
+												len++;
 
-		     pop rbp
+										new->str = dup_str;
+											new->len = len;
+												new->next = *head;
 
-		        mov rax,0
-			   ret
+													*head = new;
 
-			   section .data
-			      msg: db "Hello, Holberton", 0
-			         fmt: db "%s", 10, 0
+														return (new);
+}
